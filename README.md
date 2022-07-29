@@ -55,41 +55,43 @@ Producables -
 
 * The entire scraped data is transformed into a Pandas dataframe and then saved as a CSV.
 
+* Done using Selenium library with Python3
+
 
 ## 2. Image downloads and Object Detection ##
 
-1. Running the image download script.py will allow you to download the images from the image links included in the CSV.
-2. A pretrained YOLOv3 architecture that was trained on the DeepFashion2 dataset was used for object detection.
-3. Run the new image demo.py script to copy the code from this repository and utilise it.
-4. This model recognises the  object categories and isolates the target inside the image's bounding box.
-5. After saving the images, feature extraction is performed on it.
+*  Running the image download script.py will allow you to download the images from the image links included in the CSV.
+*  A pretrained YOLOv3 architecture that was trained on the DeepFashion2 dataset was used for object detection.
+*  Run the new image demo.py script to copy the code from this repository and utilise it.
+*  This model recognises the  object categories and isolates the target inside the image's bounding box.
+*  After saving the images, feature extraction is performed on it.
 
 ## 3.  Learning Feature Encodings ##
 
-1. In order to represent our images for later processing, we needed a way to extract the features from each item
-2. We trained a model using the keras library and tensorflow backend
-3. Our model was based on the CNN architecture which is known in the Computer Vision world for being able to learn features from images
-4. We recreated some of the images using the encodings we got and the results were very promising, indicating that out feature encodings/representations are accurate
-5. To create the model, run the script encoder_training_script.py
+*  In order to represent our images for later processing, we needed a way to extract the features from each item
+*  We trained a model using the keras library and tensorflow backend
+*  Our model was based on the CNN architecture which is known in the Computer Vision world for being able to learn features from images
+*  We recreated some of the images using the encodings we got and the results were very promising, indicating that out feature encodings/representations are accurate
+*  To create the model, run the script encoder_training_script.py
 
 ## 4. Computing the Popularity Metric (PM) ##
 
-1. We wanted consider both ratings and the number of ratings in our attempt to rank all the products effectively
-2. We came up with a popularity measure which combines the two properly
+*  We wanted consider both ratings and the number of ratings in our attempt to rank all the products effectively
+*  We came up with a popularity measure which combines the two properly
 ![image](https://user-images.githubusercontent.com/88290919/181727083-b0186367-36c3-4438-887b-c6170a749927.png)
-3. A Bayesian view of the beta distribution was adopted to come up with a formula to give us a PM(Popularity Metric) given the rating and number of ratings 
-4. We loaded in all our e-Commerce data, calculated the feature encodings using the model mentioned earlier
-5. Then computed the PM for each product
-6. Then trained a model to predict the PM given a set of encodings - we can now compare the predicted performance of different products on e-Commerce sites, this is      especially useful for designers that want to know how the public would react to their clothes
-7. To create and train the model, run pm_model_train_script.py
-8. Once the model is created, you can run pm_predictor_script.py to predict the PM for any input image
+*  A Bayesian view of the beta distribution was adopted to come up with a formula to give us a PM(Popularity Metric) given the rating and number of ratings 
+*  We loaded in all our e-Commerce data, calculated the feature encodings using the model mentioned earlier
+*  Then computed the PM for each product
+*  Then trained a model to predict the PM given a set of encodings - we can now compare the predicted performance of different products on e-Commerce sites, this is      especially useful for designers that want to know how the public would react to their clothes
+*  To create and train the model, run pm_model_train_script.py
+*  Once the model is created, you can run pm_predictor_script.py to predict the PM for any input image
 
 ## 5. Feature Clustering ##
 
-1. We performed clustering on a user-selected group of photographs using the previously calculated encodings to show the leading and lagging products in the set of        images under consideration.
-2. The Silhouette coefficient was used to test and compare 5 clustering techniques, and K means clustering produced the best outcomes.
-3. The most prevalent/trending clothing styles were represented by the largest cluster, and the least prevalent ones by the smallest clusters.
-4  Run clustering script.py to test this.
+*  We performed clustering on a user-selected group of photographs using the previously calculated encodings to show the leading and lagging products in the set of        images under consideration.
+*  The Silhouette coefficient was used to test and compare 5 clustering techniques, and K means clustering produced the best outcomes.
+*  The most prevalent/trending clothing styles were represented by the largest cluster, and the least prevalent ones by the smallest clusters.
+*  Run clustering script.py to test this.
 
 # Implementation Instructions #
 
