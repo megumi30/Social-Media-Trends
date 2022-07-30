@@ -43,13 +43,11 @@ Producables -
 
 * Following are the e-commerce websites and social media platform to extract data from
    1. Flipkart
-   2. Vogue
-   3. Amazon
-   4. Myntra
    
-* We gathered information on the product name, rating, number of reviews, and image from websites like Flipkart and Amazon.
+   
+* We gathered information on the product name, rating, number of reviews, and image from websites like Flipkart.
 
-* We gathered the fashion pictures from the various websites.
+* We gathered the laptop pictures from the website.
 
 * This stage can be readily scaled up because the scripts are simple to adapt to function on other websites by altering a few variables in accordance with the website   architecture.
 
@@ -86,12 +84,6 @@ Producables -
 *  To create and train the model, run pm_model_train_script.py
 *  Once the model is created, you can run pm_predictor_script.py to predict the PM for any input image
 
-## 5. Feature Clustering ##
-
-*  We performed clustering on a user-selected group of photographs using the previously calculated encodings to show the leading and lagging products in the set of        images under consideration.
-*  The Silhouette coefficient was used to test and compare 5 clustering techniques, and K means clustering produced the best outcomes.
-*  The most prevalent/trending clothing styles were represented by the largest cluster, and the least prevalent ones by the smallest clusters.
-*  Run clustering script.py to test this.
 
 # Implementation Instructions #
 
