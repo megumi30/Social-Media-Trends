@@ -60,7 +60,6 @@ Producables -
 
 *  Running the image download script.py will allow you to download the images from the image links included in the CSV.
 *  A pretrained YOLOv3 architecture that was trained on the DeepFashion2 dataset was used for object detection.
-*  Run the new image demo.py script to copy the code from this repository and utilise it.
 *  This model recognises the  object categories and isolates the target inside the image's bounding box.
 *  After saving the images, feature extraction is performed on it.
 
@@ -85,9 +84,6 @@ Producables -
 *  Once the model is created, you can run pm_predictor_script.py to predict the PM for any input image
 
 
-# Implementation Instructions #
-
-To be added later...
 
 ![image](https://user-images.githubusercontent.com/88290919/181727962-dafd498d-f759-415b-9539-a6c23d69a785.png)
 
